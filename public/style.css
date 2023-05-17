@@ -62,3 +62,7 @@ body{
     pointer-events: none;
     sposition: absolute;
 }
+
+#imagePreview{
+    display: none;
+}

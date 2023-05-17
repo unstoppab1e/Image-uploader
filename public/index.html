@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Image Uploader</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1>Upload your image</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="forms">
+                <label htmlFor="image" class="button">Choose a file</label>
+                <input type="file" name="image" id="imageInput" onchange=previewImage(event) />
+                <img id="imagePreview" alt="Image Preview" />
+                <button type="submit">Upload</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    <script>
+        const previewImage = (event) => {
+        const imageFiles = event.target.files;
+        const imageFilesLength = imageFiles.length;
+        if (imageFilesLength > 0) {
+            const imageSrc = URL.createObjectURL(imageFiles[0]);
+            
+            const imagePreviewElement = document.querySelector("#imagePreview");
+
+            imagePreviewElement.src = imageSrc;
+    }
+};
+    </script>
+</body>
+</html>

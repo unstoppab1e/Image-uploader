@@ -14,16 +14,16 @@
     
     <div class="wrapper">
         <h1>Upload your image</h1>
-        
+        <form action="/upload" method="POST" enctype="multipart/form-data">
             <div class="forms">
                 <label htmlFor="image" class="button">Choose a file
-                    <form action="/upload" method="POST" enctype="multipart/form-data"></form>
+                    <input type="file" name="image" id="imageInput" onchange=previewImage(event) />
                 </label>
-                <input type="file" name="image" id="imageInput" onchange=previewImage(event) />
+                
                 <img id="imagePreview" alt="Image Preview" />
                 <button type="submit">Upload</button>
             </div>
-        
+        </form>
     </div>
     
     <script>

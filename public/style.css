@@ -1,18 +1,21 @@
 body{
-    margin: 0;
-    font-family: Poppins,sans-serif;
+    height: 100hv;
+
+    font-family: "Poppins" ,sans-serif;
     font-size: 18px;
 }
 
 .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     justify-content: center;
     max-width: 420px;
     max-height: 470px;
-    margin: auto;
     padding-left: 16px;
     padding-right: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -34,6 +37,7 @@ body{
 .forms{
     display: flex;
     flex-direction: column-reverse;
+    gap: 50px;
 }
 
 .forms button{
@@ -52,9 +56,21 @@ body{
 }
 
 .button{
-    color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    display: inline-block;
+    background: #2F80ED;
+    border-radius: 8px;
+    color: #FFFFFF;
+    width: 100px;
+    height: 32px;
+    border: 2px;
+    cursor: pointer;
+      
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .forms input{
@@ -65,4 +81,6 @@ body{
 
 #imagePreview{
     display: none;
+    width: 250px;
+    height: 250px;
 }
